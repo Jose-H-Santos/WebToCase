@@ -1,56 +1,62 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Suporte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-
-    <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: Please add the following <FORM> element to your page.             -->
-    <!--  ----------------------------------------------------------------------  -->
+  <div class="form-container">
+    <h1>Formulário de Suporte</h1>
     
     <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000004OgF7" method="POST">
-    
-    <input type=hidden name="orgid" value="00DgK000004OgF7">
-    <input type=hidden name="retURL" value="https://ajuda.rdstation.com/s/article/Criar-p%C3%A1gina-de-agradecimento?language=pt_BR">
-    
-    <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-    <!--  these lines if you wish to test in debug mode.                          -->
-    <!--  <input type="hidden" name="debug" value=1>                              -->
-    <!--  <input type="hidden" name="debugEmail"                                  -->
-    <!--  value="josehebertdeveloper@gmail.com">                                  -->
-    <!--  ----------------------------------------------------------------------  -->
-    
-    <label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
-    
-    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-    
-    <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
-    
-    <label for="description">Description</label><textarea name="description"></textarea><br>
-    
-    <label for="type">Type</label><select  id="type" name="type"><option value="">--None--</option><option value="Mechanical">Mechanical</option>
-    <option value="Electrical">Electrical</option>
-    <option value="Electronic">Electronic</option>
-    <option value="Structural">Structural</option>
-    <option value="Other">Other</option>
-    </select><br>
-    
-    <label for="reason">Case Reason</label><select  id="reason" name="reason"><option value="">--None--</option><option value="Installation">Installation</option>
-    <option value="Equipment Complexity">Equipment Complexity</option>
-    <option value="Performance">Performance</option>
-    <option value="Breakdown">Breakdown</option>
-    <option value="Equipment Design">Equipment Design</option>
-    <option value="Feedback">Feedback</option>
-    <option value="Other">Other</option>
-    <option value="Cartao Credito">Cartao Credito</option>
-    <option value="Cartao Debito">Cartao Debito</option>
-    </select><br>
-    
-    <input type="hidden"  id="external" name="external" value="1" /><br>
-    
-    <input type="submit" name="submit">
-    
+      
+      <input type="hidden" name="orgid" value="00DgK000004OgF7">
+      <input type="hidden" name="retURL" value="https://ajuda.rdstation.com/s/article/Criar-p%C3%A1gina-de-agradecimento?language=pt_BR">
+      <input type="hidden" id="external" name="external" value="1" />
+
+      <label for="name">Nome do Contato</label>
+      <input id="name" name="name" type="text" maxlength="80" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" maxlength="80" required>
+
+      <label for="subject">Assunto</label>
+      <input id="subject" name="subject" type="text" maxlength="80">
+
+      <label for="description">Descrição</label>
+      <textarea name="description" rows="4"></textarea>
+
+      <label for="type">Tipo</label>
+      <select id="type" name="type">
+        <option value="">--Selecione--</option>
+        <option value="Mechanical">Mecânico</option>
+        <option value="Electrical">Elétrico</option>
+        <option value="Electronic">Eletrônico</option>
+        <option value="Structural">Estrutural</option>
+        <option value="Other">Outro</option>
+      </select>
+
+      <label for="reason">Motivo do Caso</label>
+      <select id="reason" name="reason">
+        <option value="">--Selecione--</option>
+        <option value="Installation">Instalação</option>
+        <option value="Equipment Complexity">Complexidade</option>
+        <option value="Performance">Desempenho</option>
+        <option value="Breakdown">Falha</option>
+        <option value="Equipment Design">Design</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Other">Outro</option>
+        <option value="Cartao Credito">Cartão de Crédito</option>
+        <option value="Cartao Debito">Cartão de Débito</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+
     </form>
+  </div>
+
+</body>
+</html>
